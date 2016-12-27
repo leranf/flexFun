@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100px;
+  width: 50%;
+  /*flex-flow: <flex-direction> || <flex-wrap> - default row nowrap*/
+  /*sets the main access*/
+  flex-direction: row; /*row-reverse, column, column-reverse*/
+  flex-wrap: nowrap; /*wrap, wrap-reverse*/
+  /*aligns content when there is extra space along main access*/
+  justify-content: space-between; /*flex-start, flex-end, center, space-between, space-around */
+  /*aligns content when there is extra space along cross access*/
+  align-items: stretch; /*flex-start, flex-end, center, baseline*/
+  /*aligns a flex container's lines within the container when there is extra space along cross access*/
+  align-content: stretch; /*flex-start, flex-end, center, space-bewteem space-around*/
+}
+
+.child {
+  background-color: red;
+  /*height: 100px;*/
+  width: 10%;
+  text-align: center;
+  /*assigns the order in which flex items appear in a container*/
+  order: 0;
+  /*flex: shorthand property for grow, shrink, basis*/
+  /*specifies the flex-grow factor relative to other items when positive free space*/
+  flex-grow: 0;
+  /*specifies the flex-shrink factor relative to other items when negative free space*/
+  flex-shrink: 1; /*0 will maintain normal size*/
+  /*takes same values as width and height, specifies initial size of flex item before free space is distributed*/
+  flex-basis: auto;
+  /*overrides default alignment set by align-items*/
+  align-self: auto;
+}
+
+img {
+  padding-left: 5px;
+  padding-right: 5px;
+}
